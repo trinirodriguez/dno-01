@@ -10,12 +10,12 @@
     <div class="container-fluid m-0 p-0">
       <div class="row row-cols-2 g-0" style="height:100vh">
         <div class="h-100 bg-info d-flex align-items-center justify-content-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
             <g id="primera"></g>
           </svg>
         </div>
         <div class="h-100 bg-success d-flex align-items-center justify-content-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42">
             <g id="segunda"></g>
           </svg>          
         </div>
@@ -24,12 +24,22 @@
     <script>
       //usuarios de instagram desde el 2015 al 2022
       const data = [20,10,20,50,46];
-      const quince = 7.4;
-      const veintidos = 23.8;
+      const quince = 31;
+      const veintidos = 100;
       let cero = document.querySelector("#primera");
-      cero.innerHTML = `<circle cx="50" cy="50" r="${quince}" />`;
+      cero.innerHTML = `<circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+  <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
+
+  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="${quince} ${100-quince}" stroke-dashoffset="0"></circle>
+  <text x="16" y="23" font-size="5">${quince}%</text>
+</svg>`;
       let uno = document.querySelector("#segunda");
-      uno.innerHTML = `<circle cx="50" cy="50" r="${veintidos}" />`;
+      uno.innerHTML = `<circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+  <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
+
+  <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="${veintidos} ${100-veintidos}" stroke-dashoffset="0"></circle>
+  <text x="15" y="23" font-size="5">${veintidos}%</text>
+</svg>`;
     </script>
   </body>
 </html>
